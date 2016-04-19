@@ -1,0 +1,14 @@
+{
+  "name": "kanye-twitter-bot",
+  "version": "1.0.0",
+  "description": "troll kanye; praise heben",
+  "main": "kanye.js",
+  "scripts": {
+    "test": "node kanye.js"
+  },
+  "author": "rachelle erica faroul",
+  "license": "ISC",
+  "dependencies": {
+    "twitter": "^1.2.5"
+  }
+}
