@@ -4,14 +4,7 @@ var troll = new Twitter(creds);
 
 //happens 1st
 console.log("bot is running");
-var twitter_search_phrase = 'kanye interview';
-////////// BEGIN TEST //////////
-// troll.post('statuses/update', { status: "I'm posting a tweet!" }, function(error, tweet, response) {
-//   if(error) {
-//     console.log("There was a problem tweeting the message.", error);
-//   }
-// });
-////////// END TEST //////////
+var twitter_search_phrase = '@kanyewest'; //change to 'kanye interview'
 
 ////////// INITIATE THE BOT //////////
 function startBot(){
@@ -56,6 +49,8 @@ function startBot(){
 				}
 			}
 		}
+		/* Set an interval of 5 minutes (in microseconds) */
+		setInterval(retweetBot, 5*60*1000);
 	}
 
 

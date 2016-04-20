@@ -1,5 +1,3 @@
-
-
 watch for Kanye's tweet activity
 
 when console.log(tweet) get the whole tweet object
