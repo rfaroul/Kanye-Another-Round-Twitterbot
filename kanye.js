@@ -1,6 +1,7 @@
 var Twitter = require("twit");
 var creds = require("./auth.json");
 var troll = new Twitter(creds);
+var tips = require("./justsayin.js");
 var quotes = require("./quotes");
 //happens 1st
 console.log("bot is running");
@@ -30,40 +31,24 @@ function trollKanye(){
 		result_type: "recent"
 	}
 
-	troll.get("search/tweets", query, getLatestTweets);
+	troll.get("search/tweets", query, getDemTweets);
 
-	function getLatestTweets(error, data, response){
+	function getDemTweets(error, data, response){
 		if(error){
 			console.log("Bot could not find latest tweet " + error );
 		}
 		else{
 			console.log("DATA OBJECT!: ", data);
 			var id = {
-				id: data.statuses[0].text
+				id: data.statuses[0].id_str
 			}
-			//troll.post('statuses/retweet/:id', id, retweet);
-
-			//use statuses/update THEN statuses/retweet/:id ???
-				//text THEN permalink to the article THEN the OG tweet
 				//append the link to the tweet that's quoted in the status
-					// data.statuses[0]  quoted_status_id
-					//as long as the link is the last part of the tweet, it'll be hidden on UI end
-			troll.post("statuses/update", { status: "hey there! " + "https://twitter.com/twitter/status/" + id.id }, function(error, tweet, response){
+			troll.post("statuses/update", { status: campaignTweet + "https://twitter.com/twitter/status/" + id.id }, function(error, tweet, response){
 				if(!error){
-					//console.log("STATUS " + status);
 					console.log("IT WORKS!");
 					console.log("TWEET", tweet);
 				}
 			});
-
-			function retweet(error, response){
-				if(error){
-					console.log('Bot could not retweet, ', error);
-				}
-				else{
-					console.log("BOT RETWEETED " + id.id + " END CYCLE"); //id.id is a number
-				}
-			}
 		}
 	}
 	/* Set an interval of 5 minutes (in microseconds) */
