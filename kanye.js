@@ -4,7 +4,7 @@ var troll = new Twitter(creds);
 
 //happens 1st
 console.log("bot is running");
-var twitter_search_phrase = '#kanye OR #interview';
+var twitter_search_phrase = 'kanye interview';
 ////////// BEGIN TEST //////////
 // troll.post('statuses/update', { status: "I'm posting a tweet!" }, function(error, tweet, response) {
 //   if(error) {
