@@ -9,6 +9,6 @@
   "author": "rachelle erica faroul",
   "license": "ISC",
   "dependencies": {
-    "twitter": "^1.2.5"
+    "twit": "^2.2.3"
   }
 }
