@@ -6,8 +6,6 @@ tweet.text = "user: tweet" as string
 console.log("actual tweet: ", tweet.text);
 			console.log("original poster: ", tweet.user.screen_name);
 
-twitter_search_phrase = 'kanye' and 'interview' ('kanye AND interview')
-
 want to use client.post(statuses/update...)
 	parameters = status, in_reply_to_status_id, media_ids (maybe, if want to add gif or photos)
 	how to dynamically add hashtags?
@@ -15,7 +13,7 @@ want to use client.post(statuses/update...)
 //////////////////////////////////
 
 TWEET CONTENT
-every time 'kanye' and 'interview' are mentioned in a tweet, direct message kanye with a tip that includes him granting interviews to black journalists and hosts.
+every time 'kanye' and 'interview' are mentioned in a tweet, tweet with a tip that includes him granting interviews to black journalists and hosts.
 
 ////////////////////////////
 HOW TO GENERATE CONTENT
