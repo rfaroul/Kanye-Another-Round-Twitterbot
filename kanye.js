@@ -39,7 +39,7 @@ function trollKanye(){
 		else{
 			console.log("DATA OBJECT!: ", data);
 			var id = {
-				id: data.statuses[0].text
+				id: data.statuses[0].id_str
 			}
 			//troll.post('statuses/retweet/:id', id, retweet);
 
@@ -56,14 +56,14 @@ function trollKanye(){
 				}
 			});
 
-			function retweet(error, response){
-				if(error){
-					console.log('Bot could not retweet, ', error);
-				}
-				else{
-					console.log("BOT RETWEETED " + id.id + " END CYCLE"); //id.id is a number
-				}
-			}
+			// function retweet(error, response){
+			// 	if(error){
+			// 		console.log('Bot could not retweet, ', error);
+			// 	}
+			// 	else{
+			// 		console.log("BOT RETWEETED " + id.id + " END CYCLE"); //id.id is a number
+			// 	}
+			// }
 		}
 	}
 	/* Set an interval of 5 minutes (in microseconds) */
