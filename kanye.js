@@ -27,7 +27,7 @@ function startBot(){
 
 	function botInitiated(error, tweet, response){
 		if (error){
-			console.log("Bot could not be initiated. ", error);
+			console.log("Bot could not be initiated. ", error); //getting a 'code 34' error instead of 'already retweeted' error. WHY?!
 		}
 		else{
 			console.log("Bot initiated: 241259202004267009");
