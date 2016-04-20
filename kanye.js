@@ -24,7 +24,7 @@ function startBot(){
 };
 
 function trollKanye(){
-	console.log("retweet something"); //happens 2nd before botInitiated()
+	console.log("(re)tweet something"); //happens 2nd before botInitiated()
 	var query = {
 		q: twitter_search_phrase,
 		result_type: "recent"
@@ -38,9 +38,9 @@ function trollKanye(){
 		}
 		else{
 			console.log("DATA OBJECT!: ", data);
-			// var id = {
-			// 	id: data.statuses[0].id_str
-			// }
+			var id = {
+				id: data.statuses[0].text
+			}
 			//troll.post('statuses/retweet/:id', id, retweet);
 
 			//use statuses/update THEN statuses/retweet/:id ???
@@ -48,17 +48,13 @@ function trollKanye(){
 				//append the link to the tweet that's quoted in the status
 					// data.statuses[0]  quoted_status_id
 					//as long as the link is the last part of the tweet, it'll be hidden on UI end
-			var params = {
-				status: "hey kanye", //change this eventually to quotes (from js file)
-				id: data.statuses[0].id_str,
-			}
-			troll.post("statuses/update", {status: } , function(error, tweet, response){
+			troll.post("statuses/update", { status: "hey there! " + "https://twitter.com/twitter/status/" + id.id }, function(error, tweet, response){
 				if(!error){
-					console.log("STATUS " + status)
+					//console.log("STATUS " + status);
 					console.log("IT WORKS!");
-					console.log(tweet);
+					console.log("TWEET", tweet);
 				}
-			})
+			});
 
 			function retweet(error, response){
 				if(error){
@@ -71,7 +67,7 @@ function trollKanye(){
 		}
 	}
 	/* Set an interval of 5 minutes (in microseconds) */
-	setInterval(trollKanye, 5*60*1000);
+	setInterval(trollKanye, 1*60*1000);
 };
 
 startBot();
