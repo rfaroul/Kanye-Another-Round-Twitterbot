@@ -38,12 +38,26 @@ function trollKanye(){
 	// 	result_type: "recent"
 	// }
 
+<<<<<<< HEAD
 	// troll.get("search/tweets", query, getDemTweets);
+=======
+	function getLatestTweets(error, data, response){
+		if(error){
+			console.log("Bot could not find latest tweet " + error );
+		}
+		else{
+			console.log("DATA OBJECT!: ", data);
+			var id = {
+				id: data.statuses[0].id_str
+			}
+			//troll.post('statuses/retweet/:id', id, retweet);
+>>>>>>> d49c2573e42d16ba98b784775f8a979b05bc7c56
 
 	stream.on('tweet', function (tweet) {
   		console.log(tweet);
 	});
 
+<<<<<<< HEAD
 	// function getDemTweets(error, data, response){
 	// 	if(error){
 	// 		console.log("Bot could not find latest tweet " + error );
@@ -62,6 +76,18 @@ function trollKanye(){
 	// 		});
 	// 	}
 	// }
+=======
+			// function retweet(error, response){
+			// 	if(error){
+			// 		console.log('Bot could not retweet, ', error);
+			// 	}
+			// 	else{
+			// 		console.log("BOT RETWEETED " + id.id + " END CYCLE"); //id.id is a number
+			// 	}
+			// }
+		}
+	}
+>>>>>>> d49c2573e42d16ba98b784775f8a979b05bc7c56
 	/* Set an interval of 5 minutes (in microseconds) */
 	//setInterval(trollKanye, 1*60*1000);
 };
