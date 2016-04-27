@@ -2,6 +2,6 @@
 
 
 
-//var campaignTweet = {"hey there! "}
+var campaignTweet = "hey there! "
 
-//module.exports = campaignTweet;
+module.exports = campaignTweet;

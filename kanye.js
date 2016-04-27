@@ -47,16 +47,14 @@ function trollKanye(){
 			}
 
 			//append the link to the tweet that's quoted in the status
-			troll.post('statuses/retweet/:id', id, retweet);
+			troll.post('statuses/update', { status: tips + " https://twitter.com/twitter/status/" + id.id }, retweet);
 
-			function retweet(error, response){
-				if(error){
-					console.log('Bot could not retweet, ', error);
-				}
-				else{
-					console.log("BOT RETWEETED " + id.id + " END CYCLE"); //id.id is a number
-				}
-			}
+			function retweet(error, tweet, response){
+  				if(!error){
+  					console.log("IT WORKS!");
+  					console.log("TWEET", tweet);
+  				}
+  			}
 		}
 	}
 
