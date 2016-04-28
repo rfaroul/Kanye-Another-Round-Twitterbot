@@ -36,18 +36,19 @@ function trollKanye(){
 
 	troll.get("search/tweets", query, getDemTweets);
 	
-	function getDemTweets(error, data, response){
+	function getDemTweets(error, data, response){ //HAPPENS 3rd after botInitiated
 		if(error){
 			console.log("Bot could not find latest tweet " + error );
 		}
 		else{
-			console.log("DATA OBJECT!: ", data);
 			var id = {
 				id: data.statuses[0].id_str
 			}
+			console.log("DATA OBJECT!: ", id.id);
 
+			console.log("tips ", tips);
 			//append the link to the tweet that's quoted in the status
-			troll.post('statuses/update', { status: tips + " https://twitter.com/twitter/status/" + id.id }, retweet);
+			troll.post('statuses/update', { status: tips[0] + " https://twitter.com/twitter/status/" + id.id }, retweet);
 
 			function retweet(error, tweet, response){
   				if(!error){

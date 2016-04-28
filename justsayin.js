@@ -2,6 +2,11 @@
 
 
 
-var campaignTweet = "hey there! "
+var campaignTweets = ["hey there! ", "what's up? "]; //this is an object
 
-module.exports = campaignTweet;
+
+// for (var i = 0; i < campaignTweets.length; i++){
+// 	return campaignTweets[i];
+// }
+
+module.exports = campaignTweets;
