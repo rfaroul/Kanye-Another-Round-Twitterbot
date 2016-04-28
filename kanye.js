@@ -1,7 +1,7 @@
 var Twitter = require("twit");
 var creds = require("./auth.json");
 var troll = new Twitter(creds);
-var campaignTweets = require("./justsayin.js");
+var tips = require("./justsayin.js");
 var quotes = require("./quotes");
 //happens 1st
 console.log("bot is running");
@@ -46,14 +46,14 @@ function trollKanye(){
 			}
 			console.log("DATA OBJECT!: ", id.id);
 
-			//console.log("campaignTweets ", campaignTweets);
-			//var tips = campaignTweets[Math.floor(Math.random()*campaignTweets.length)];
-			console.log("randomly generated campaign tweet ", campaignTweets);
+			//console.log("tips ", tips);
+			//var tips = tips[Math.floor(Math.random()*tips.length)];
+			console.log("randomly generated campaign tweet ", tips);
 
 
 			//append the link to the tweet that's quoted in the status
 			//troll.post('statuses/update', { status: ".@kanyewest "+ tips + " https://twitter.com/twitter/status/" + id.id }, retweet);
-			troll.post('statuses/update', {status: campaignTweets + "http://bzfd.it/1TyCGEF"}, retweet)//tweet a quote from the article and a tip. don't retweet anything
+			troll.post('statuses/update', {status: tips + "http://bzfd.it/1TyCGEF"}, retweet)//tweet a quote from the article and a tip. don't retweet anything
 			
 			function retweet(error, tweet, response){
   				if(!error){
