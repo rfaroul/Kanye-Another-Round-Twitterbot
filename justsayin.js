@@ -2,7 +2,7 @@
 
 
 
-var campaignTweets = ["hey there! ", "what's up? "]; //this is an object
+var campaignTweets = ["hey there! ", "what's up? ", "what's the word? ", "come back ", "you got this "]; //this is an object
 
 
 // for (var i = 0; i < campaignTweets.length; i++){
