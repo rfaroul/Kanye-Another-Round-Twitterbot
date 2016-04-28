@@ -9,6 +9,7 @@
   "author": "rachelle erica faroul",
   "license": "ISC",
   "dependencies": {
+    "cool-ascii-faces": "1.3.4",
     "twit": "^2.2.3"
   }
 }
