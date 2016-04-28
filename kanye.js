@@ -46,10 +46,7 @@ function trollKanye(){
 			}
 			console.log("DATA OBJECT!: ", id.id);
 
-			//console.log("tips ", tips);
-			//var tips = tips[Math.floor(Math.random()*tips.length)];
 			console.log("randomly generated campaign tweet ", tips);
-
 
 			//append the link to the tweet that's quoted in the status
 			//troll.post('statuses/update', { status: ".@kanyewest "+ tips + " https://twitter.com/twitter/status/" + id.id }, retweet);
@@ -58,15 +55,13 @@ function trollKanye(){
 			function retweet(error, tweet, response){
   				if(!error){
   					console.log("IT WORKS!");
-  					//console.log("TWEET", tweet);
   				}
   			}
 		}
 	}
 
-
-	/* Set an interval of 5 minutes (in microseconds) */
-	//setInterval(trollKanye, 30*60*1000);
+	/* Set an interval of 30 minutes (in microseconds) */
+	setInterval(trollKanye, 30*60*1000);
 }
 
 /* Initiate KanyeBot */
