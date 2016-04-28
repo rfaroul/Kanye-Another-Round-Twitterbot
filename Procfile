@@ -1,1 +1,1 @@
-web: node kanye.js
+web: node index.js
