@@ -13,7 +13,7 @@
 var quotes = ["[I] wonder if anyone read the interview, because he talks about [what] others so boringly mock him for: his vanity. ", //116
  "What I am interested in talking about is how race affects the way people perceive and respond to his vanity. ", //109
   "Kanye is a part of a long tradition of black artists for whom self-love is a political act. ", //92
-   "it can be hard to catch that Kanye speaks almost from a populist perspective ", //77
+   "it can be hard to catch that Kanye speaks almost from a populist perspective. -@hebenrants", //77
     "If you chalk up his “we don’t care what people say” attitude to simply his ego, then you've missed the point.", //109
     "This isn’t about ego; this is about boldly asserting yourself in a world that is not meant for you. ", //100
     "the message he gives the kids is not to be modest but to unapologetically laugh in the face of a world that does not care about them.", //133

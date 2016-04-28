@@ -53,7 +53,7 @@ function trollKanye(){
 
 			//append the link to the tweet that's quoted in the status
 			//troll.post('statuses/update', { status: ".@kanyewest "+ tips + " https://twitter.com/twitter/status/" + id.id }, retweet);
-			troll.post('statuses/update', {status: campaignTweets + "http://bzfd.it/1TyCGEF", retweet})//tweet a quote from the article and a tip. don't retweet anything
+			troll.post('statuses/update', {status: campaignTweets + "http://bzfd.it/1TyCGEF"}, retweet)//tweet a quote from the article and a tip. don't retweet anything
 			
 			function retweet(error, tweet, response){
   				if(!error){
