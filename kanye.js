@@ -3,11 +3,12 @@ var creds = require("./auth.json");
 //var troll = new Twitter(creds);
 
 var troll = new Twitter({
-	consumer_key: creds.consumer_key,
-	consumer_secret: creds.consumer_secret,
-	access_token: creds.access_token,
-	access_token_secret: creds.access_token_secret
-})
+	consumer_key: process.env.TWITTER_CONSUMER_KEY || creds.consumer_key,
+	consumer_secret: process.env.TWITTER_CONSUMER_SECRET || creds.consumer_secret,
+	access_token: process.env.TWITTER_ACCESS_TOKEN || creds.access_token,
+	access_token_secret: process.env.TWITTER_TOKEN_SECRET || creds.access_token_secret
+});
+
 var tips = require("./justsayin.js");
 
 //happens 1st
