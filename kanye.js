@@ -46,14 +46,15 @@ function trollKanye(){
 			}
 			console.log("DATA OBJECT!: ", id.id);
 
-			console.log("campaignTweets ", campaignTweets);
-			var tips = campaignTweets[Math.floor(Math.random()*campaignTweets.length)];
-			console.log("randomly generated campaign tweet ", tips);
+			//console.log("campaignTweets ", campaignTweets);
+			//var tips = campaignTweets[Math.floor(Math.random()*campaignTweets.length)];
+			console.log("randomly generated campaign tweet ", campaignTweets);
 
 
 			//append the link to the tweet that's quoted in the status
-			troll.post('statuses/update', { status: tips + " https://twitter.com/twitter/status/" + id.id }, retweet);
-
+			//troll.post('statuses/update', { status: ".@kanyewest "+ tips + " https://twitter.com/twitter/status/" + id.id }, retweet);
+			troll.post('statuses/update', {status: campaignTweets + "http://www.buzzfeed.com/hnigatu/in-defense-of-kanyes-vanity-the-politics-of-black-self-love?utm_term=.pfleazjG9#.cjkGZq1jV", retweet})//tweet a quote from the article and a tip. don't retweet anything
+			
 			function retweet(error, tweet, response){
   				if(!error){
   					console.log("IT WORKS!");
@@ -65,7 +66,7 @@ function trollKanye(){
 
 
 	/* Set an interval of 5 minutes (in microseconds) */
-	setInterval(trollKanye, 5*60*1000);
+	//setInterval(trollKanye, 30*60*1000);
 }
 
 /* Initiate KanyeBot */
