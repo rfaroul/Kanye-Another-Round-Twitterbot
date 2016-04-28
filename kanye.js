@@ -1,6 +1,13 @@
 var Twitter = require("twit");
 var creds = require("./auth.json");
-var troll = new Twitter(creds);
+//var troll = new Twitter(creds);
+
+var troll = new Twitter({
+	consumer_key: creds.consumer_key,
+	consumer_secret: creds.consumer_secret,
+	access_token: creds.access_token,
+	access_token_secret: creds.access_token_secret
+})
 var tips = require("./justsayin.js");
 
 //happens 1st
