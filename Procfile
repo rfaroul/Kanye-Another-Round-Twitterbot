@@ -1,1 +1,1 @@
-web: node index.js
+worker: node kanye.js
