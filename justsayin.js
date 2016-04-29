@@ -28,7 +28,7 @@ var campaignTweets = [
 ]; 
 
 for (var i =0; i < campaignTweets.length; i++) {
-    	console.log(campaignTweets[i], campaignTweets[i].length);
+    	(campaignTweets[i], campaignTweets[i].length);
     };
 var tips = campaignTweets[Math.floor(Math.random() * campaignTweets.length)];
 
